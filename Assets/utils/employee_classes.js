@@ -37,8 +37,34 @@ class Manager extends Employee {
   }
 }
 
+class Engineer extends Employee {
+  constructor(name, id, email, githubName, githubLink) {
+    super(name, id, email);
+    this.githubName = githubName;
+    this.githubLink = githubLink;
+    this.role = 'Engineer';
+  }
+
+  getGithub() {
+    return `${this.githubName}: ${this.githubLink}`
+  }
+}
+
+class Intern extends Employee {
+  constructor(name, id, email, school) {
+    super(name, email, id);
+    this.school = school;
+    this.role = 'Intern';
+  }
+
+  getSchool() {
+    return this.school
+  }
+}
+
 const jason = new Employee('jason', 2, 'nyjasonlam@gmail.com')
 const ben = new Manager('ben', 3, 'ben@bennyandeggs.com', 5)
+const simon = new Engineer('simon', 5, 'simon@whatever.com', 'simondcheng', 'github.com')
+const danny = new Intern('danny', 6, 'danny@whatever.com', 'Columbia University')
 
-console.log(jason.getRole())
-console.log(ben.getRole())
+console.log(danny.getRole())

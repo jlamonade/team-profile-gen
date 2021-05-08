@@ -43,7 +43,7 @@ class Engineer extends Employee {
   }
 
   getGithub() {
-    return `${this.githubName}: ${this.githubLink}`;
+    return `${this.githubName}: https://github.com/${this.githubName}`;
   }
 }
 

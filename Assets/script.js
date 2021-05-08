@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const fs = require('fs');
 const { Manager, Engineer, Intern } = require("./utils/employee_classes");
 const {
   starterQuestions,
@@ -12,7 +13,8 @@ const employeeObjectsArray = [];
 const startPrompts = () => {
   inquirer
     .prompt(starterQuestion)
-    .then((answer) => {
+    .then((answers) => {
+      fs.writeFile('')
       return null;
     });
 };

@@ -1,8 +1,8 @@
-const starterQuestion = [
+const starterQuestions = [
   {
-    type: "list",
-    name: "role",
-    message: "Choose a role or output",
+    type: "input",
+    name: "teamName",
+    message: "Team Name: ",
   },
 ];
 
@@ -43,7 +43,7 @@ const engineerQuestions = [
 ];
 
 module.exports = {
-  starterQuestion,
+  starterQuestions,
   employeeQuestions,
   managerQuestions,
   engineerQuestions,

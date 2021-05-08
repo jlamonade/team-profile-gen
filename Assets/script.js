@@ -3,7 +3,7 @@ const fs = require("fs");
 const outputMainTemplate = require("./utils/templates");
 const { Manager, Engineer, Intern } = require("./utils/employee_classes");
 const {
-  starterQuestions,
+  starterQuestion,
   employeeQuestions,
   managerQuestions,
   engineerQuestions,
@@ -12,7 +12,7 @@ const {
 const employeeObjectsArray = [];
 
 const startPrompts = () => {
-  inquirer.prompt(starterQuestions).then((answers) => {
+  inquirer.prompt(starterQuestion).then((answers) => {
     fs.writeFile(
       "test.html",
       outputMainTemplate(answers.teamName),

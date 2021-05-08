@@ -1,8 +1,23 @@
-const starterQuestions = [
+const starterQuestion = [
   {
     type: "input",
     name: "teamName",
     message: "Team Name: ",
+    validate: function (input) {
+      (input.name === 'jason') ? true : false;
+    }
+
+    /* validate: function (input) {
+      let done = this.async();
+
+      setTimeout(function (input) {
+        if (typeof input === "string") {
+          done("you need to provide a string");
+          return
+        }
+        done(null, true);
+      }, 1000);
+    }, */
   },
 ];
 
@@ -43,7 +58,7 @@ const engineerQuestions = [
 ];
 
 module.exports = {
-  starterQuestions,
+  starterQuestion,
   employeeQuestions,
   managerQuestions,
   engineerQuestions,

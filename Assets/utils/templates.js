@@ -39,7 +39,7 @@ function outputMainTemplate(teamName) {
   </head>
   <body>
     <header class="container-fluid header bg-light text-center p-3 mb-3">
-      <h1 class="">${teamName}</h1>
+      <h1>${teamName}</h1>
     </header>
     <section class="container profile-section">
     </section>

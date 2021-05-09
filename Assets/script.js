@@ -10,11 +10,8 @@ const {
   optionsList,
 } = require("./utils/inquirer_prompts");
 
-const userInput = new Map().set("employees", []);
-
 const startPrompts = () => {
-  let addMoreEmployees = true;
-  let HTML = ``;
+  const userInput = new Map().set("employees", []);
 
   inquirer.prompt(starterQuestion).then(({ teamName }) => {
     userInput.set("teamName", teamName);

@@ -24,23 +24,26 @@ const startPrompts = () => {
           return inquirer
             .prompt(managerQuestions)
             .then(({ name, id, email, officeNumber }) => {
-              let employeeObject = new Manager(name, id, email, officeNumber)
+              const employeeObject = new Manager(name, id, email, officeNumber)
               setEmployeeObjectToUserInput(employeeObject)
-              console.log(userInput.get('employees'))
             });
         case "Add Engineer":
           return inquirer
             .prompt(engineerQuestions)
             .then(({ name, id, email, githubName }) => {
-              console.log(answers);
+              const employeeObject = new Engineer(name, id, email, githubName)
+              setEmployeeObjectToUserInput(employeeObject)
             });
         case "Add Intern":
           return inquirer
             .prompt(internQuestions)
             .then(({ name, id, email, school }) => {
-              console.log(answers);
+              const employeeObject = new Intern(name, id, email, school)
+              setEmployeeObjectToUserInput(employeeObject)
             });
         case "Finish and Generate HTML":
+          addMoreEmployees = false;
+          userInput.get('employees')
       }
     });
   });

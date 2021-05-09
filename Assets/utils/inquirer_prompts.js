@@ -3,23 +3,29 @@ const starterQuestion = [
     type: "input",
     name: "teamName",
     message: "Team Name: ",
-    validate: function (input) {
-      (input.name === 'jason') ? true : false;
-    }
-
-    /* validate: function (input) {
-      let done = this.async();
-
-      setTimeout(function (input) {
-        if (typeof input === "string") {
-          done("you need to provide a string");
-          return
-        }
-        done(null, true);
-      }, 1000);
-    }, */
+    // validate: function (input) {
+    //   const done = this.async()
+    //   if (input !== '[\w\d\s]') {
+    //     done('You need to provide a valid string.')
+    //   } 
+    //   done(null, true)
+    // }
   },
 ];
+
+const optionsList = [
+  {
+    type: 'list',
+    name: 'option',
+    message: 'What do you want to do?',
+    choices: [
+      'Add Manager',
+      'Add Engineer',
+      'Add Intern',
+      'Finish and Generate HTML',
+    ]
+  }
+]
 
 const employeeQuestions = [
   {
@@ -57,9 +63,19 @@ const engineerQuestions = [
   },
 ];
 
+const internQuestions = [
+  ...employeeQuestions,
+  {
+    type: 'input',
+    name: 'school',
+    message: 'School: '
+  }
+]
+
 module.exports = {
   starterQuestion,
-  employeeQuestions,
   managerQuestions,
   engineerQuestions,
+  internQuestions,
+  optionsList
 };

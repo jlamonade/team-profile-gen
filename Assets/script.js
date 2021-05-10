@@ -10,7 +10,7 @@ const {
   optionsList,
 } = require("./utils/inquirer_prompts");
 
-const userInput = new Map().set("employees", []);
+const userInput = new Map().set("employees", [1, 2, 3, 4, 5]);
 
 const startPrompts = () => {
   inquirer.prompt(starterQuestion).then(({ teamName }) => {
@@ -41,9 +41,7 @@ const askEmployeeQuestions = () => {
           });
         break;
       case "Add Intern":
-        inquirer
-        .prompt(internQuestions)
-        .then(({ name, id, email, school }) => {
+        inquirer.prompt(internQuestions).then(({ name, id, email, school }) => {
           const employeeObject = new Intern(name, id, email, school);
           setEmployeeObjectToUserInput(employeeObject);
           askEmployeeQuestions();
@@ -59,8 +57,14 @@ const askEmployeeQuestions = () => {
   });
 };
 
+const generateProfileCards = () => {
+  userInput.get("employees").forEach(employee => console.log(employee))
+};
+
 const setEmployeeObjectToUserInput = (employeeObject) => {
   userInput.set("employees", [...userInput.get("employees"), employeeObject]);
 };
 
-startPrompts();
+generateProfileCards();
+
+// startPrompts();

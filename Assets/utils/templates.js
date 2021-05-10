@@ -48,4 +48,9 @@ function outputMainTemplate(teamName) {
 `;
 }
 
+function outputCardTemplate(data) {
+  const {...data} = data;
+  return console.log(data)
+}
+
 module.exports = outputMainTemplate;

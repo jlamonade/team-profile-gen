@@ -48,4 +48,36 @@ function outputMainTemplate(teamName) {
 `;
 }
 
-module.exports = outputMainTemplate;
+function outputCardTemplate(employeeObj) {
+  const { name, id, role, email, officeNumber, githubUserName, school } =
+    employeeObj;
+  let cardTemplate = `<h3 class="card-title">${name}</h3>
+  <h4 class="card-subtitle mb-2 text-muted">${role}</h4>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">ID: ${id}</li>
+  <li class="list-group-item">
+    Email: <a href="mailto://EMAIL">${email}</a>
+  </li>`;
+
+  switch (role) {
+    case "Manager":
+      cardTemplate += `<li class="list-group-item">
+      Office Number: ${officeNumber}
+    </li>`;
+      break;
+    case "Engineer":
+      cardTemplate += `
+    <li class="list-group-item">
+      Github: <a href="#github-link-here">${githubUserName}</a>
+    </li>`;
+    case "Intern":
+      cardTemplate += `<li class="list-group-item">
+      School: ${school}
+    </li>`;
+  }
+
+  return cardTemplate;
+}
+
+module.exports = { outputMainTemplate, outputCardTemplate };

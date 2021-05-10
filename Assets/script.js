@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const outputMainTemplate = require("./utils/templates");
+const { outputMainTemplate, outputCardTemplate } = require("./utils/templates");
 const { Manager, Engineer, Intern } = require("./utils/employee_classes");
 const {
   starterQuestion,
@@ -41,22 +41,28 @@ const askEmployeeQuestions = () => {
           });
         break;
       case "Add Intern":
-        inquirer
-        .prompt(internQuestions)
-        .then(({ name, id, email, school }) => {
+        inquirer.prompt(internQuestions).then(({ name, id, email, school }) => {
           const employeeObject = new Intern(name, id, email, school);
           setEmployeeObjectToUserInput(employeeObject);
           askEmployeeQuestions();
         });
         break;
       case "Finish and Generate HTML":
-        // fs.writeFile('test.html', JSON.stringify(userInput.get("employees")), "utf8", (err) => {
-        //   err ? console.log(err) : console.log("Successfully written");
-        // });
-        // TODO: Create HTML renderer
+        appendEmployeeObjectsAsCardsToFile();
         break;
     }
   });
+};
+
+const appendEmployeeObjectsAsCardsToFile = () => {
+  userInput.employees.forEach((employee) =>
+    fs.appendFile(
+      "test.html",
+      JSON.stringify(outputCardTemplate(employee), "utf8", (err) => {
+        err ? console.log(err) : console.log("Write Successful!");
+      })
+    )
+  );
 };
 
 const setEmployeeObjectToUserInput = (employeeObject) => {

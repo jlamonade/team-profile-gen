@@ -10,7 +10,7 @@ const {
   optionsList,
 } = require("./utils/inquirer_prompts");
 
-const userInput = new Map().set("employees", []);
+const userInput = new Map().set("employees", [1, 2, 3, 4, 5]);
 
 const startPrompts = () => {
   inquirer.prompt(starterQuestion).then(({ teamName }) => {
@@ -69,4 +69,6 @@ const setEmployeeObjectToUserInput = (employeeObject) => {
   userInput.set("employees", [...userInput.get("employees"), employeeObject]);
 };
 
-startPrompts();
+generateProfileCards();
+
+// startPrompts();

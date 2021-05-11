@@ -78,7 +78,7 @@ const renderFullHtml = (userData) => {
   /* 
   using the output from outputMainTemplate creates a new html file
   */
-  fs.writeFile("test.html", outputMainTemplate(userData), "utf8", (err) => {
+  fs.writeFile("./dist/index.html", outputMainTemplate(userData), "utf8", (err) => {
     err ? console.log(err) : console.log("Write Successful!");
   });
 };

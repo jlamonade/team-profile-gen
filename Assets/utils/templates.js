@@ -12,11 +12,11 @@ function outputMainTemplate(userInput) {
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./Assets/css/style.css">
-    <title>${userInput.teamName}</title>
+    <title>${userInput.get('teamName')}</title>
   </head>
   <body>
     <header class="container-fluid header text-center p-3 mb-3">
-      <h1>${userInput.teamName}</h1>
+      <h1>${userInput.get('teamName')}</h1>
     </header>
     <section class="container profile-section">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">

@@ -1,14 +1,14 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { outputMainTemplate } = require("./Assets/utils/templates");
-const { Manager, Engineer, Intern } = require("./Assets/utils/employee_classes");
+const { outputMainTemplate } = require("./src/templates");
+const { Manager, Engineer, Intern } = require("./src/employee_classes");
 const {
   starterQuestion,
   managerQuestions,
   engineerQuestions,
   internQuestions,
   optionsList,
-} = require("./Assets/utils/inquirer_prompts"); // importing in prompts
+} = require("./src/inquirer_prompts"); // importing in prompts
 
 const userInput = new Map().set("employees", []); 
 /* creates a map for user input and

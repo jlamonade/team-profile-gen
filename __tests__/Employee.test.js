@@ -14,4 +14,7 @@ describe("Employee Class", () => {
       "jason@gmail.com"
     );
   });
+  it("should return employee role", () => {
+    expect(new Employee().getRole()).toEqual("Employee");
+  });
 });

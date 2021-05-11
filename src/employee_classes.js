@@ -33,7 +33,7 @@ class Manager extends Employee {
     this.role = "Manager";
   }
 
-  getOfficeNumer() {
+  getOfficeNumber() {
     return this.officeNumber;
   }
 }
@@ -62,4 +62,4 @@ class Intern extends Employee {
   }
 }
 
-module.exports = { Manager, Engineer, Intern };
+module.exports = { Employee, Manager, Engineer, Intern };

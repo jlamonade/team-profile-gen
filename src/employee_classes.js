@@ -27,6 +27,7 @@ class Employee {
 }
 
 class Manager extends Employee {
+  // Manager subclass of Employee class
   constructor(name, id, email, officeNumber) {
     super(name, id, email);
     this.officeNumber = officeNumber;
@@ -39,6 +40,7 @@ class Manager extends Employee {
 }
 
 class Engineer extends Employee {
+  // Engineer subclass of employee class
   constructor(name, id, email, githubName) {
     super(name, id, email);
     this.githubName = githubName;
@@ -51,6 +53,7 @@ class Engineer extends Employee {
 }
 
 class Intern extends Employee {
+  // Intern subclass of employee class
   constructor(name, id, email, school) {
     super(name, id, email);
     this.school = school;

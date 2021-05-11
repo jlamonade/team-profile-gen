@@ -39,7 +39,7 @@ class Manager extends Employee {
 }
 
 class Engineer extends Employee {
-  constructor(name, id, email, githubName, githubLink) {
+  constructor(name, id, email, githubName) {
     super(name, id, email);
     this.githubName = githubName;
     this.role = "Engineer";

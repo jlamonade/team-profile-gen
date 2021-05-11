@@ -24,6 +24,8 @@ A team profile generator that uses the inquire npm package to collect user input
 
 ```node index```
 
+[Walkthrough Video](https://drive.google.com/file/d/1hTgIFEplY0xMO0VhLslyF29Oynm7IXqN/view)
+
 ## License
 
 This project is distrubuted under the following licenses:

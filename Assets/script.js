@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { outputMainTemplate, outputCardTemplate } = require("./utils/templates");
+const { outputMainTemplate } = require("./utils/templates");
 const { Manager, Engineer, Intern } = require("./utils/employee_classes");
 const {
   starterQuestion,
@@ -8,9 +8,9 @@ const {
   engineerQuestions,
   internQuestions,
   optionsList,
-} = require("./utils/inquirer_prompts");
+} = require("./utils/inquirer_prompts"); // importing in prompts
 
-const userInput = new Map().set("employees", [1, 2, 3, 4, 5]);
+const userInput = new Map().set("employees", []); // creates a map to user input
 
 const startPrompts = () => {
   inquirer.prompt(starterQuestion).then(({ teamName }) => {
@@ -48,27 +48,20 @@ const askEmployeeQuestions = () => {
         });
         break;
       case "Finish and Generate HTML":
-        appendEmployeeObjectsAsCardsToFile();
+        renderFullHtml(userInput);
         break;
     }
   });
 };
 
-const appendEmployeeObjectsAsCardsToFile = () => {
-  userInput.employees.forEach((employee) =>
-    fs.appendFile(
-      "test.html",
-      JSON.stringify(outputCardTemplate(employee), "utf8", (err) => {
-        err ? console.log(err) : console.log("Write Successful!");
-      })
-    )
-  );
+const renderFullHtml = (userData) => {
+  fs.writeFile("test.html", outputMainTemplate(userData), "utf8", (err) => {
+    err ? console.log(err) : console.log("Write Successful!");
+  });
 };
 
 const setEmployeeObjectToUserInput = (employeeObject) => {
   userInput.set("employees", [...userInput.get("employees"), employeeObject]);
 };
 
-generateProfileCards();
-
-// startPrompts();
+startPrompts();

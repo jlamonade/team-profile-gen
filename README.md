@@ -1,0 +1,89 @@
+# team-profile-gen
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Description
+
+A team profile generator that uses the inquire npm package to collect user input and render a team profile in HTML. Uses Bootstrap for styling and jest for testing.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+
+## Installation
+
+```npm i```
+
+## Usage
+
+```node index```
+
+## License
+
+This project is distrubuted under the following licenses:
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Contributing
+
+Email me
+
+## Tests
+
+```npm test```
+
+## Questions
+
+Github: [jlamonade](https://www.github.com/jlamonade)
+
+Email: nyjasonlam@gmail.com# team-profile-gen
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+## Description
+
+A team profile generator that uses the inquire npm package to collect user input and uses that to render a team profile page in HTML. Using bootstrap for styling and jest for testing.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+
+## Installation
+
+```npm i```
+
+## Usage
+
+```node index```
+
+## License
+
+This project is distrubuted under the following licenses:
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+## Contributing
+
+Email me
+
+## Tests
+
+```npm test```
+
+## Questions
+
+Github: [jlamonade](https://www.github.com/jlamonade)
+
+Email: nyjasonlam@gmail.com

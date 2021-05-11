@@ -7,7 +7,7 @@ describe("Manager Subclass", () => {
 
   it("should return manager office number", () => {
     expect(
-      new Employee("Jason", 2, "jason@gmail.com", 1).getOfficeNumber()
+      new Manager("Jason", 2, "jason@gmail.com", 1).getOfficeNumber()
     ).toEqual(1);
   });
 });

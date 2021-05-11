@@ -1,4 +1,6 @@
 function outputMainTemplate(userInput) {
+  // returns profile page html
+  // html for main template
   let mainTemplate = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,23 +14,24 @@ function outputMainTemplate(userInput) {
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./Assets/css/style.css">
-    <title>${userInput.get('teamName')}</title>
+    <title>${userInput.get("teamName")}</title>
   </head>
   <body>
     <header class="container-fluid header text-center p-3 mb-3">
-      <h1>${userInput.get('teamName')}</h1>
+      <h1>${userInput.get("teamName")}</h1>
     </header>
     <section class="container profile-section">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 `;
 
-  userInput.get('employees').forEach(employee => {
+  userInput.get("employees").forEach((employee) => {
+    // loops through employee objects and appends each employee card to main html
     mainTemplate += outputCardTemplate(employee);
-  })
+  });
 
-  mainTemplate += `</div>`
+  mainTemplate += `</div>`; // closing div for employee cards row div
 
-  return (
+  return ( // main template and closing tags
     mainTemplate +
     `</section>
   </body>
@@ -37,8 +40,11 @@ function outputMainTemplate(userInput) {
 }
 
 function outputCardTemplate(employeeObj) {
+  // renders each employee card
   const { name, id, role, email, officeNumber, githubName, school } =
+  // employee object destructured for all possibilities
     employeeObj;
+  // all employee cards will have the following html
   let cardTemplate = `<div class="col">
   <div class="card border-light shadow rounded-0">
     <div class="card-header rounded-0">
@@ -52,6 +58,8 @@ function outputCardTemplate(employeeObj) {
   </li>`;
 
   switch (role) {
+    // depending on the role the html hereafter will be different
+    // each switch case will append different html to the employee card
     case "Manager":
       cardTemplate += `<li class="list-group-item">
       Office Number: ${officeNumber}
@@ -73,7 +81,7 @@ function outputCardTemplate(employeeObj) {
       break;
   }
 
-  return cardTemplate;
+  return cardTemplate; // returns the employee cards html minus closing tags
 }
 
 module.exports = { outputMainTemplate };

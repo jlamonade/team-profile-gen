@@ -18,7 +18,7 @@ function outputMainTemplate(userInput) {
       <h1>${userInput.teamName}</h1>
     </header>
     <section class="container profile-section">
-      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-3">
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
 `;
 
   userInput.get('employees').forEach(employee => {

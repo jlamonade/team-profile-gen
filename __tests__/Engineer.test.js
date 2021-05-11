@@ -1,13 +1,13 @@
-const { Manager } = require("../src/employee_classes");
+const { Engineer } = require("../src/employee_classes");
 
-describe("Manager Subclass", () => {
-  it("should return Manager role", () => {
-    expect(new Manager("Jason").getRole()).toEqual("Manager");
+describe("Engineer Subclass", () => {
+  it("should return Engineer role", () => {
+    expect(new Engineer().getRole()).toEqual("Engineer");
   });
 
   it("should return manager office number", () => {
     expect(
-      new Manager("Jason", 2, "jason@gmail.com", 1).getOfficeNumber()
-    ).toEqual(1);
+      new Engineer("Jason", 2, "jason@gmail.com", 'jlamonade').getGithub()
+    ).toEqual('jlamonade');
   });
 });

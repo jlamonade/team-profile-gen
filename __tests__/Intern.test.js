@@ -1,6 +1,6 @@
 const { Intern } = require("../src/employee_classes");
 
-describe("Manager Subclass", () => {
+describe("Intern Subclass", () => {
   it("should return Intern role", () => {
     expect(new Intern("Jason").getRole()).toEqual("Intern");
   });

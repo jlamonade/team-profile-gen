@@ -14,11 +14,11 @@ function outputMainTemplate(userInput) {
     <title>${userInput.teamName}</title>
   </head>
   <body>
-    <header class="container-fluid header bg-light text-center p-3 mb-3">
+    <header class="container-fluid header text-center p-3 mb-3">
       <h1>${userInput.teamName}</h1>
     </header>
     <section class="container profile-section">
-      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 `;
 
   userInput.get('employees').forEach(employee => {
@@ -39,10 +39,10 @@ function outputCardTemplate(employeeObj) {
   const { name, id, role, email, officeNumber, githubName, school } =
     employeeObj;
   let cardTemplate = `<div class="col">
-  <div class="card border-light shadow-sm">
-    <div class="card-header">
+  <div class="card border-light shadow rounded-0">
+    <div class="card-header rounded-0">
   <h3 class="card-title">${name}</h3>
-  <h4 class="card-subtitle mb-2 text-muted">${role}</h4>
+  <h4 class="card-subtitle mb-2">${role}</h4>
 </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${id}</li>

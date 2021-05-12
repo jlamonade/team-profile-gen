@@ -18,15 +18,15 @@ A team profile generator that uses the inquire npm package to collect user input
 
 ## Installation
 
-Clone repo to local machine
+- Clone repo to local machine
 
-```npm i```
+- ```npm i```
 
 ## Usage
 
-```node index```
+- ```node index```
 
-[Walkthrough Video](https://drive.google.com/file/d/1hTgIFEplY0xMO0VhLslyF29Oynm7IXqN/view)
+- [Walkthrough Video](https://drive.google.com/file/d/1hTgIFEplY0xMO0VhLslyF29Oynm7IXqN/view)
 
 ## License
 
@@ -44,6 +44,6 @@ Email me
 
 ## Questions
 
-Github: [jlamonade](https://www.github.com/jlamonade)
+- Github: [jlamonade](https://www.github.com/jlamonade)
 
-Email: nyjasonlam@gmail.com
+- Email: nyjasonlam@gmail.com

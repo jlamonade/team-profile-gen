@@ -18,6 +18,8 @@ A team profile generator that uses the inquire npm package to collect user input
 
 ## Installation
 
+Clone repo to local machine
+
 ```npm i```
 
 ## Usage
